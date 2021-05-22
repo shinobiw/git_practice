@@ -1,0 +1,144 @@
+# 1.
+# Установка 
+# sudo apt-get install git
+
+# 2.
+# проверка установки
+# git --version
+
+# 3.
+# Настройка 
+
+# зарегистрироваться в Github/Gitlab
+
+# git config --global user.email "umeibegimai@gmail.com"
+# git config --global user.name "UBegimai"
+
+
+# Проверяем введенные настройки
+
+# git config --global user.name
+# git config --global user.email
+
+
+# 4.
+# Создание ssh -ключа
+
+# ssh-keygen
+
+# ^
+# Generating public/private rsa key pair.
+# Enter file in which to save the key (/home/lenovo/.ssh/id_rsa): 
+# /home/lenovo/.ssh/id_rsa already exists.
+# Overwrite (y/n)? y
+# Enter passphrase (empty for no passphrase): 
+# Enter same passphrase again: 
+# Your identification has been saved in /home/lenovo/.ssh/id_rsa.
+# Your public key has been saved in /home/lenovo/.ssh/id_rsa.pub.
+# The key fingerprint is:
+# SHA256:nnQbPUcOo2kWgMi18bZ8ThquFxpYvq41q5yJBSjYJ9w lenovo@lenovo
+# The key's randomart image is:
+# +---[RSA 2048]----+
+# |   . oo..        |
+# |    o .+ .       |
+# |      . o . o .  |
+# |.+ .  .o . = =   |
+# |+ = E+  S X o o  |
+# |.  +. o+.@ o o   |
+# |    . o+=.o      |
+# |   + +o+.        |
+# |  . *++.         |
+# +----[SHA256]-----+
+
+
+# 5.
+# Копируем публичный ключ
+
+# cat ~/.ssh/id_rsa.pub
+
+# github.com/settings/profile
+# -> SSH and GPG Keys
+# -> Add new SSH key 
+# Вводим имя компьютера и ключ
+
+6.
+# Инициализируем локальный репозиторий 
+# get init 
+
+# Создаем новый репозиторий  в Github
+
+# Скопировать ссылку SSH 
+
+# Связывание локального и удаленного
+# репозиториев
+# git remote add origin ссылка
+
+# Список привязанных удаленных
+# репозиториев
+# git remote -v 
+
+# 7.
+# создаем файл .gitignore
+# указываем файлы и папки, которые не должны попасть в Github
+# gitignore.io -> python
+
+# копируем содержимое
+
+# nano .gitignore -> вставляем и сохраняем
+
+# проверка на наличие файла 
+# ls -a 
+
+
+# 8.
+# git status --- Отслеживание изменений
+# Отмечаются любые изменения: добавление файла, 
+# изменение содержимого файла 
+# и удаление файла
+
+# Изменения в игнорируемых файлах и папках не проверяются, 
+# не закидываются в репозиторий
+
+# git reset -> удаляет все
+# git reset (название файла) -> удаляет указанный файл
+
+# 9.
+
+# git commit - создание версии
+# 
+# git commit -m 'name_of_version or comment'
+
+
+# git log -> просмотр списка версий
+# git log --oneline -> сокращенная версия
+
+
+# git reset HEAD~ -> Откат последней версии
+
+# git push -f origin master 
+
+# git pull -> стягивает изменения, получение изменений, получаем чужие коммиты
+# из удаленного в локальный
+
+# git pull origin name_of_branch
+
+# git pull 
+# git fetch && git merge 
+
+
+# 10.
+# Ветки
+
+# создание новой ветки
+# git branch new_branchname
+
+# Переход на другую ветку
+# git checkout name_of_branch
+
+# создание и переход на ветку
+# git checkout -b new_name_of_branch
+
+# 11. 
+# Удаление ветки
+
+# git branch -D name_of_branch
